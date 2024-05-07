@@ -7,6 +7,7 @@ import Footer from './Components/Landing/Footer';
 import Products from './Pages/Products';
 import ProductsView from './Components/Shop/ProductsView';
 import Carts from './Pages/Carts';
+import Contact from './Components/Landing/Contact';
 
 
 
@@ -25,6 +26,7 @@ const App=()=>{
       {/* <Route path='/cart' element={<Carts/> }/> */}
       <Route path='/cart' element={<Carts/> }/>
       <Route path='/info' element={<ProductInfor/> }/>
+      <Route path='/contact' element={<Contact/> }/>
       <Route path='/product-details' element={<ProductsView/> }/>
       </Routes>
       </BrowserRouter>
