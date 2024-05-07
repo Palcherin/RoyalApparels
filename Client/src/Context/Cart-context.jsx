@@ -1,5 +1,7 @@
 import React, { createContext, useState } from 'react'
+
 import DATA from '../Components/Data';
+import { useReducer } from 'react';
 
 
 
@@ -10,13 +12,14 @@ const getDefaultCart=()=>{
     cart[i]=0;
   }
   return cart;
- 
 }
 
-export const CartContextProvider = (props) => {
-  // const[cartItems,setCartItems]=useState( getDefaultCart)
-  const [cartItems, setCartItems]=useState(getDefaultCart)
 
+export const CartContextProvider = (props) => {
+  const[cartItems,setCartItems]=useState( getDefaultCart)
+
+
+// add to cart
   const addToCart = (itemId) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
@@ -26,8 +29,9 @@ export const CartContextProvider = (props) => {
       return updatedCart;
     });
   };
+
   
- 
+//  remove from cart
   const removeFromCart = (itemId) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };

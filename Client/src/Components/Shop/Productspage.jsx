@@ -17,15 +17,7 @@ const Productspage = () => {
     setClose(true)
     
   }
-  // const addToCart = (itemId) => {
-  //   setCartItems((prev) => {
-  //     const updatedCart = { ...prev };
- 
-  //     updatedCart[itemId] = (updatedCart[itemId] || 0) + 1;
-  
-  //     return updatedCart;
-  //   });
-  // };
+
   return (
     <>
     {
@@ -76,7 +68,7 @@ const Productspage = () => {
             </section>
             <section className='m-1'>
                 <button className='bg-sky-600 hover:bg-sky-500 p-2 w-[35%] rounded m-1 font-bold'>BUY NOW</button> or
-                <button className='bg-green-600 hover:bg-green-500 rounded p-2 w-[35%] m-1 font-bold'>ADD TO CART</button>
+                <button className='bg-green-600 hover:bg-green-500 rounded p-2 w-[35%] m-1 font-bold' >ADD TO CART</button>
             </section>
         </div>
       
@@ -86,7 +78,7 @@ const Productspage = () => {
     }
    
     <div className='grid-cols-2 sm:grid md:grid-cols-4 min-h-[100vh] pt-[6%] p-[3%]'>
-        {DATA.slice(0,15).map((values)=>{
+        {DATA.map((values)=>{
           const { id, Title, price, about, Image } = values;
           const { addToCart, cartItems } = useContext(ShopContext);
           const cartItemsAmout = cartItems[id];
@@ -101,8 +93,10 @@ const Productspage = () => {
                   <span className='font-bold text-green-700'>Ksh{price}</span>
                 </section>
                 {/* <Link to={`/product-details`} className='border text-slate-600 p-2 w-[85%]' >More Details</Link> */}
-                <button className='border text-slate-600 p-2 w-[80%]'   onClick={() => ProductsDetails(values)} >Order Now</button>
-                <ShoppingCartTwoToneIcon onClick={()=>addToCart(id)} className='text-white bg-emerald-500 p-1 text-4xl  '  fontSize='70px' size='30px'/>
+                <button className='border text-slate-600 p-2 w-[75%]'   onClick={() => ProductsDetails(values)} >Order Now</button>
+                <ShoppingCartTwoToneIcon  onClick={() => addToCart(id)} className='text-white bg-emerald-500 p-1 text-4xl  '  fontSize='70px' size='30px'/>
+                
+                {cartItemsAmout>0 &&<>({cartItemsAmout})</>}
                 <section>
                   
                   

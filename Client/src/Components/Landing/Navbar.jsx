@@ -78,9 +78,10 @@ const Navbar = () => {
               </button>
               <button className='font-bold  text-sm text-orange-500  py-2 px-3 rounded-3xl  hover:text-orange-400 
      duration-500 '>
-                <ShoppingCartTwoToneIcon className='text-5xl' />
+                
               </button>
-
+              <a href='/cart' className='font-bold  text-sm text-orange-500  py-2 px-3 rounded-3xl  hover:text-orange-400 
+     duration-500'><ShoppingCartTwoToneIcon className='text-6xl' /></a>
             </div>
           </ul>
           {/* button */}

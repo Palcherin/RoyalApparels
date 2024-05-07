@@ -2,7 +2,7 @@
 
 const DATA = [
     {
-          id: 0,
+          id: 1,
           Title:'Al Nasri Home Kit',
           Image:'assets/Al Hilal.jpg',
           about:'Sizes Available:S,M,L,XL,XXL',
@@ -10,7 +10,7 @@ const DATA = [
           category:'Jersey'
         },
         {
-          id: 1,
+          id: 31,
           Title:'PSG AWAY KIT Kit',
           Image:'assets/PSG THIRD KIT.webp',
           about:'Sizes Available:S,M,L,XL,XXL',

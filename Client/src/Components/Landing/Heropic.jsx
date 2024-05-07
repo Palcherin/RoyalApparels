@@ -6,7 +6,7 @@ const Heropic = () => {
   return (
     <div className=' min-h-[90vh] flex justify-normal  bg-sky-100 '>
      <div className='rounded-right-full basis-[50%] p-[5%]  '>
-      <h1 className='text-6xl font-bold font-sans m-3'>Royal Apparels Jersey Stores</h1>
+      <h1 className='text-6xl font-bold font-sans m-3'>Royal Apparels <span className='text-emerald-600'>Jersey</span> Stores</h1>
       <p className='font-light text-l m-3'>Kua fan wa nguvu. Get the jersey of your choice printed and delivered to you anywhere in the country.</p>
       <section className='flex justify-start m-5'>
         <button className='bg-green-400 p-2 rounded-full m-2 animate-pulse'>Get Started</button>
