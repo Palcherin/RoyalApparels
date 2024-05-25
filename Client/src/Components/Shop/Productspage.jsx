@@ -84,8 +84,8 @@ const Productspage = () => {
           const cartItemsAmout = cartItems[id];
          
           return(
-            <div className=' shadow-xl w-65   h-[400px] p-2 m-4 '  key={id}>
-              <img src={Image} className='h-[50%] w-[80%]  object-cover'/>
+            <div className=' shadow-xl w-65   min-h-[400px] p-2 m-4 '  key={id}>
+              <img src={Image} className='h-[60%] w-[80%]  object-cover'/>
               <section>
                 <h1 className='font-bold text-xl m-4'>{Title} </h1>
                 <h1>{about} </h1>

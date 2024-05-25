@@ -32,7 +32,7 @@ const Heropic = () => {
         </section>
       </div>
      </div>
-     <div className='basis-[50%] w-full h-[90vh] mr-5'>
+     <div className='basis-[55%] w-full h-[100vh] mr-5'>
       <Sliderpage/>
      </div>
     </div>

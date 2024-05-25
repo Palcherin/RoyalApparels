@@ -14,7 +14,7 @@ export const CartItemsComponent = (props) => {
         <div className='basis-40% pt-[2%]'>
         <h1 className='bg-black p-1 rounded-full text-white font-bold w-fit px-3 animate-bounce'>Fast shipment</h1>
           <h1 className='text-2xl font-bold font-mono'>{Title}</h1>
-          <section className='w-[100%] flex justify-between'>
+          <section className='w-[10 0%] flex justify-between'>
           <section>
                 <h1 className='border-slate-400 p-2 w-fit font-bold mt-1'>Size Chart</h1>
                 <div className='flex'>

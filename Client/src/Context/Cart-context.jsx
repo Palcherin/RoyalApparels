@@ -16,15 +16,17 @@ const getDefaultCart=()=>{
 
 
 export const CartContextProvider = (props) => {
-  const[cartItems,setCartItems]=useState( getDefaultCart)
+  const [cartItems,setCartItems]=useState(getDefaultCart(()=>{
+    JSON.parse(localStorage.getItem("Cart"))
+  }));
 
 
 // add to cart
-  const addToCart = (itemId) => {
+  const addToCart = (itemid) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
  
-      updatedCart[itemId] = (updatedCart[itemId] || 0) + 1;
+      updatedCart[itemid] = (updatedCart[itemid] || 0) + 1;
   
       return updatedCart;
     });
@@ -32,22 +34,22 @@ export const CartContextProvider = (props) => {
 
   
 //  remove from cart
-  const removeFromCart = (itemId) => {
+  const removeFromCart = (itemid) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
     
-      updatedCart[itemId] = (updatedCart[itemId] || 0) -1;
+      updatedCart[itemid] = (updatedCart[itemid] || 0) -1;
   
       return updatedCart;
     });
   };
   
 
-  const updateCartItemCount = (newAmount, itemId) => {
+  const updateCartItemCount = (newAmount, itemid) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
   
-      updatedCart[itemId] = newAmount;
+      updatedCart[itemid] = newAmount;
   
       return updatedCart;
     });

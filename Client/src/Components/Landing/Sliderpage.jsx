@@ -42,12 +42,12 @@ export default function Sliderpage() {
      showArrows={true} 
      showStatus={false}
       showThumbs={false}
-      style={{ width: "100%", height: "80vh" }}
+      style={{ width: "100%", height: "90vh" }}
        className='w-[100%]'>
     {Categories.slice(0,4).map((product, index) => (
       <div key={index} className="w-[100%] h-[70vh] block items-center justify-center ">
         <section className="">
-        <img src={product.image} alt={product.desk} className="object-center md:w-[100vw] h-[100%] border  border-opacity-50 z-0" />
+        <img src={product.image} alt={product.desk} className="object-cover md:w-[100vw] h-[100vh] border  border-opacity-50 z-0" />
         <p className="absolute text-2xl font-bold m-3 bottom-0 left-0  bg-black bg-opacity-100 text-white text-center py-3 w-[70%]">{product.desc}</p>
         </section>
 
