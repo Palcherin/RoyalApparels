@@ -29,7 +29,22 @@ export const CartContextProvider = (props) => {
       return updatedCart;
     });
   };
+  // const addToCart = (product) => {
+  //   setCartItems((prevItems) => {
+  //     const newItems = { ...prevItems };
+  //     if (newItems[product.id]) {
+  //       newItems[product.id] += 1;
+  //     } else {
+  //       newItems[product.id] = 1;
+  //     }
+  //     return newItems;
+  //   });
+  // };
 
+  const value = {
+    cartItems,
+    addToCart,
+  };
   
 //  remove from cart
   const removeFromCart = (itemId) => {

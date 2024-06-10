@@ -46,8 +46,8 @@ const DATA = [
         },
         {
           id: 6,
-          Title:'REAL MADRID HOME Kit 23/24',
-          Image:'assets/real madrid home.webp',
+          Title:'MAN UNITED 3RD Kit 23/24',
+          Image:'assets/man u home page nobg.png',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
         },

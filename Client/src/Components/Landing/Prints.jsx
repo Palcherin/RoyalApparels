@@ -5,14 +5,14 @@ const Prints = () => {
   return (
     <>
     <div className='text-center text-2xl font-bold mb-5 text-sky-500'>
-      <h1 className=''>Deal Of The Day</h1>
+      <h1 className=''>New Arrivals</h1>
       
     </div>
     <div className='shadow-2xl bg-sky-400 border-collapse h-[45vh] w-[50vw] ml-[20%] mb-[5%]'>
         {DATA.slice(6,7).map((values)=>{
             const{id, Image, Title, price, about}=values
             return(
-                <div className='h-[40vh]'>
+                <div className='h-[40vh] W-[60%]'>
                     <section className='flex justify-start h-[41vh] p-1'>
                        <img src={Image} className='object-contain h-[40vh] basis-[30%] w-[100%]' /> 
                        <section className=' mt-[3%] text-center'>

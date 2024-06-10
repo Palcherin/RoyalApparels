@@ -2,6 +2,7 @@ import React from 'react'
 import Offers from './Offers'
 import Prints from './Prints'
 import Gallery from './Gallery'
+import Ourservices from './Ourservices'
 
 const Homepage = () => {
   return (
@@ -12,7 +13,7 @@ const Homepage = () => {
         <div>
           <Offers/>
           <Prints/>
-          <Gallery/>
+          <Ourservices/>
         </div>
       
     </div>
