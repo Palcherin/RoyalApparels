@@ -9,9 +9,9 @@ const Navbar = () => {
   
   let Links = [
     { name: "Home", link: "/home" },
-    { name: "Jerseys", link: "/products" },
-    { name: "Products", link: "/products" },
-    { name: "Contact", link: "/contact" },
+    { name: "Shop", link: "/products" },
+    { name: "Contacts", link: "/contact" },
+    { name: "About", link: "/products" },
 
   ];
   let [open, setOpen] = useState(false);
@@ -33,8 +33,11 @@ const Navbar = () => {
             <div class="relative flex ml-[4%]">
               <input
                 type="search"
-                class="relative m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary w-[60%]"
-                placeholder="Search"
+                class="relative m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.30rem] 
+                text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3]
+                 focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 
+                 dark:autofill:shadow-autofill dark:focus:border-primary w-[300px]"
+                placeholder="Search category..."
                 aria-label="Search"
                 id="exampleFormControlInput2"
                 aria-describedby="button-addon2" />
@@ -88,18 +91,9 @@ const Navbar = () => {
         </div>
 
       </div>
-      {/* <div className='border-1 text-center w-full bg-sky-200 p-[3%]'>
-            
-              <buttton className='text-xl text-slate-500 m-3'>Bondes League</buttton>
-              <buttton className='text-xl text-slate-500 m-3'>Bondes League</buttton>
-              <buttton className='text-xl text-slate-500 m-3'>Bondes League</buttton>
-              <buttton className='text-xl text-slate-500 m-3'>Bondes League</buttton>
-              <buttton className='text-xl text-slate-500 m-3'>Bondes League</buttton>
-            
-        </div> */}
+   
     </>
   );
 };
 
 export default Navbar;
-

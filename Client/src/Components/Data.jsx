@@ -9,13 +9,13 @@ const DATA = [
           price: 1500,
           category:'Jersey'
         },
-        {
-          id: 31,
-          Title:'PSG AWAY KIT Kit',
-          Image:'assets/PSG THIRD KIT.webp',
-          about:'Sizes Available:S,M,L,XL,XXL',
-          price: 1500,
-        },
+        // {
+        //   id: 31,
+        //   Title:'PSG AWAY KIT Kit',
+        //   Image:'assets/PSG THIRD KIT.webp',
+        //   about:'Sizes Available:S,M,L,XL,XXL',
+        //   price: 1500,
+        // },
         {
           id: 2,
           Title:'PSG HOME Kit 23/24',

@@ -1,29 +1,47 @@
-import React, { useContext } from 'react'
-import { CartItemsComponent } from '../Components/Cart/CartItemsComponent'
-import DATA from '../Components/Data'
-import { useNavigate } from 'react-router-dom'
-import { ShopContext } from '../Context/Cart-context'
+import React, { useContext } from "react";
 
-const Carts = () => {
-  const {cartItems,getTotalAmount}=useContext(ShopContext)
-  const total=getTotalAmount();
-  
-  return(
-  <div >
-    
-      <div className='bg-slate-50 min-h-[10vh]'>
-        <h1 className='ml-40 font-bold s-20'>Cart Items</h1>
+import { useNavigate } from "react-router-dom";
+import DATA from "../Components/Data";
+import { ShopContext } from "../Context/Cart-context";
+import CartItems from "../Components/Cart/CartItemsComponent";
+const Cart = () => {
+  const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
+
+  const navigate = useNavigate();
+
+  return (
+    <div className="cart">
+      <div>
+        <h1>Your Cart Items</h1>
       </div>
-      <div className='cartItems'>
-        {DATA.map((product)=>{
-          if(cartItems[product.id]!==0){
-            return <CartItemsComponent data={product}/>
+      <div className="cart">
+        {DATA.map((product) => {
+          if (cartItems[product.id] !== 0) {
+            return <CartItems data={product} />;
           }
-        })};
+        })}
       </div>
 
+      {totalAmount > 0 ? (
+        <div className="checkout">
+          <p> Subtotal: ${totalAmount} </p>
+          <button onClick={() => navigate("/")}> Continue Shopping </button>
+          <button
+            onClick={() => {
+              checkout();
+              navigate("/checkout");
+            }}
+          >
+            {" "}
+            Checkout{" "}
+          </button>
+        </div>
+      ) : (
+        <h1> Your Shopping Cart is Empty</h1>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Carts
+export default Cart

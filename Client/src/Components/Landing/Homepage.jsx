@@ -12,8 +12,8 @@ const Homepage = () => {
         </section>
         <div>
           <Offers/>
-          <Prints/>
-          <Ourservices/>
+          {/* <Prints/> */}
+          {/* <Ourservices/> */}
         </div>
       
     </div>
