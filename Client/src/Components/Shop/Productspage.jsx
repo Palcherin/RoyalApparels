@@ -13,6 +13,7 @@ const Productspage = () => {
   const [close, setClose] = useState(false);
   const [details, setDetails] = useState([]);
   const { addToCart, cartItems } = useContext(ShopContext);
+  const [ search, setSearch]=useState();
   const floatingDivRef = useRef(null);
 
   const ProductsDetails = (product) => {
@@ -47,6 +48,34 @@ const Productspage = () => {
 
   return (
     <>
+    <div class="relative flex ml-[4%]">
+              <input
+                type="search"
+                class="relative mt-5 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.80rem] 
+                text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3]
+                 focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 
+                 dark:autofill:shadow-autofill dark:focus:border-primary w-[300px]"
+                placeholder="Search category..."
+                aria-label="Search"
+                id="exampleFormControlInput2"
+                onChange={(e)=>setSearch(e.target.value)}
+                aria-describedby="button-addon2" />
+              <span
+                class="flex items-center whitespace-nowrap px-3 py-[0.25rem] text-surface dark:border-neutral-400 dark:text-white [&>svg]:h-5 [&>svg]:w-5"
+                id="button-addon2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+              </span>
+            </div>
     <div className='w-full'>
       {/* Categories button visible on small screens */}
       <section className="md:hidden flex justify-center my-4">
@@ -165,7 +194,14 @@ const Productspage = () => {
         </div>
       )}
       <div className={`content ${close ? 'opacity-50' : ''} grid grid-cols-2 md:grid-cols-4 min-h-[100vh] pt-[6%] p-[3%] bg-slate-50`}>
-        {DATA.map((values) => {
+        {DATA.filter((val)=>{
+          if (search==""){
+            return val;
+          }else if (val.Title.includes(search)){
+            return val
+          }
+        }).
+        map((values) => {
           const { id, Title, price, about, Image } = values;
           const cartItemsAmount = cartItems[id];
 
