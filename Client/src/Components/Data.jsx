@@ -54,7 +54,7 @@ const DATA = [
           Image:'assets/man u home page nobg.png',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-           category:'premier leaague'
+           category:'premier league'
         },
         {
           id: 7,
@@ -62,7 +62,7 @@ const DATA = [
           Image:'assets/Man city awaykit.jpeg',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-           category:'premier leaague'
+           category:'premier league'
         },
         {
           id: 8,
@@ -70,7 +70,7 @@ const DATA = [
           Image:'assets/Man uniited away.jpg',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-           category:'premier leaague'
+           category:'premier league'
         },
         {
           id: 9,
@@ -78,7 +78,7 @@ const DATA = [
           Image:'assets/Man united awaykit.webp',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-          category:'premier leaague'
+          category:'premier league'
 
         },
         {
@@ -95,7 +95,7 @@ const DATA = [
           Image:'assets/Liverpool home kit1.webp',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-          category:'premier leaague'
+          category:'premier league'
         },
     
     
@@ -105,7 +105,7 @@ const DATA = [
           Image:'assets/intermilan home kit.jpeg',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-          category:'premier leaague'
+          category:'premier league'
         },
         {
           id: 13,
@@ -113,7 +113,7 @@ const DATA = [
           Image:'assets/Ian Wright jersey front.jpg',
           about:'sizes:S,M,L,XL,XXL',
           price: 1500,
-          category:'premier leaague'
+          category:'premier league'
         },
     
   
@@ -124,7 +124,7 @@ const DATA = [
             Image:'assets/juventus home kit.webp',
             about:'sizes:S,M,L,XL,XXL',
             price: 1500,
-            category:'premier leaague'
+            category:'premier league'
           },
             {
             id: 15,
@@ -132,7 +132,7 @@ const DATA = [
             Image:'assets/Barcelona home kit.webp',
             about:'sizes:S,M,L,XL,XXL',
             price: 1500,
-            category:'premier leaague'
+            category:'premier league'
             
           },
           {
@@ -141,7 +141,7 @@ const DATA = [
             Image:'assets/United printed.jpg',
             about:'sizes:S,M,L,XL,XXL',
             price: 1500,
-            category:'premier leaague'
+            category:'premier league'
           },
           {
             id: 17,
@@ -149,7 +149,7 @@ const DATA = [
             Image:'assets/intermiami home kit.jpeg',
             about:'sizes:S,M,L,XL,XXL',
             price: 1500,
-            category:'premier leaague'
+            category:'premier league'
           },
           {
             id: 18,
@@ -157,7 +157,7 @@ const DATA = [
             Image:'assets/Chelsea home printed.jpg',
             about:'sizes:S,M,L,XL,XXL',
             price: 1500,
-            category:'premier leaague'
+            category:'premier league'
           },
           
         

@@ -21,7 +21,7 @@ const Navbar = () => {
 
 
       <div className='  w-full   top-0 left-0 z-10 border-2'>
-        <div className='md:flex items-center justify-between bg-sky-100 py-4 md:px-10 px-7'
+        <div className='md:flex items-center justify-between bg-[#011c2b] py-4 md:px-10 px-7'
           style={{
             background: ""
           }}>
