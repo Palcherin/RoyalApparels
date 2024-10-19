@@ -1,7 +1,9 @@
 import { Checkbox } from '@mui/material'
 import React from 'react'
+import { Navigate, useParams } from 'react-router-dom'
 
 const ProductsView = () => {
+    const params=useParams();
   return (
     <div className='bg-white flex justify-start min-h-[110vh]'>
         <div className='basis-[60%] p-[2%] items-center'>
@@ -9,7 +11,7 @@ const ProductsView = () => {
         </div>
         <div className='basis-[40%]'>
             <h1 className='text-3xl m-3'>Arsenal Third Kit 23/24</h1>
-            <h1 className='font-bold font-mono text-xl'>Ksh.1500</h1>
+            <h1 className='font-bold font-mono text-xl'>Ksh.1500 {JSON.stringify(params)}</h1>
             <section>
                 <h1 className='border-slate-400 p-2 w-fit font-bold mt-4'>Size Chart</h1>
                 <div className='flex'>
@@ -42,6 +44,12 @@ const ProductsView = () => {
             <section className='m-5'>
                 <button className='bg-sky-600 p-2 w-[35%] rounded m-1 font-bold'>Proceed to Pay</button> or
                 <button className='bg-green-600 p-2 w-[35%] m-1 font-bold'>Order by Whatsapp</button>
+                
+            </section>
+            <section>
+                <h1>or  
+                    <button onClick={Navigate('./cart')}>Go to Cart</button>
+                </h1>
             </section>
         </div>
       
